@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: cadetblue;
+    font-family: 'Comfortaa', cursive;
+}
+header{
+    display: flex;
+    text-align: center;
+}
+.navbar{
+    font-family: 'Comfortaa', cursive;
+    height: 70px;
+    background-color: grey;
+}
+.navbar h1{
+    display: inline-block;
+    float: left;
+    padding: 15px 20px;
+}
+.navbar h1 a{
+    text-decoration: none;
+    color: tomato;
+    text-transform: uppercase;
+}
+.navbar .text-2{
+    color: whitesmoke;
+}
+.navbar ul{
+    float: right;
+}
+.navbar ul li{
+    padding: 20px;
+    display: inline-block;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.container ::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 15px;
+}
+.mobile-menu:hover{
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -700px;
+    width: 40%;
+    background-color: rgba(174, 182, 191 , .9);
+    transition: .5s;
+}
+.sidebar ul li a{
+    color: #000;
+    text-decoration: none;
+}
+.sidebar ul li{
+    padding: 20px;
+    transition: .3s;
+}
+.sidebar ul li:hover{
+    background-color: grey;
+}
+#check:checked ~ .sidebar{
+    left: 0px;
+}
+.container-wrapper{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: auto;
+    text-align: center;
+    padding: 20px;
+    margin-left: 20px;
+    margin-bottom:210px;
+    margin-top: 140px;
+    box-shadow: 1px 4px 8px white;
+    border-radius: 10px;
+    background-color: rgb(60, 160, 163);
+} 
+.icon{
+    font-size: 85px;
+    margin: 10px;
+}
+.wrapper a{
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 768px){
+    .mobile-menu{
+        display: block;
+    }
+    .navbar ul{
+        display: none;
+    }
+    header{
+    display: inline-block;
+    text-align: center;
+    }
+}

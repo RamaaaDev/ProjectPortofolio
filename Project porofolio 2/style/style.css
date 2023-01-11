@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: white;
+}
+.navbar{
+    font-family: 'Comfortaa', cursive;
+    height: 70px;
+    background-color: grey;
+}
+.navbar h1{
+    display: inline-block;
+    float: left;
+    padding: 15px 20px;
+}
+.navbar h1 a{
+    text-decoration: none;
+    color: tomato;
+    text-transform: uppercase;
+}
+.navbar .text-2{
+    color: whitesmoke;
+}
+.navbar ul{
+    float: right;
+}
+.navbar ul li{
+    padding: 20px;
+    display: inline-block;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.container ::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 15px;
+}
+.mobile-menu:hover{
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -700px;
+    width: 40%;
+    background-color: rgba(174, 182, 191 , .9);
+    transition: .5s;
+}
+.sidebar ul li a{
+    color: #000;
+    text-decoration: none;
+}
+.sidebar ul li{
+    padding: 20px;
+    transition: .3s;
+}
+.sidebar ul li:hover{
+    background-color: grey;
+}
+#check:checked ~ .sidebar{
+    left: 0px;
+}
+/*Banner styling*/
+.banner{
+    background-color: cadetblue;
+}
+section{
+    padding: 100px;
+}
+.banner img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px white;
+}
+.banner img:hover{
+    width: 200px;
+    height: 200px;
+    transition: all .2s ease-in-out ;
+}
+.container-banner h2, span, p {
+    color: whitesmoke;
+    padding: 10px 0;
+}
+/*about*/
+section h3{
+    text-align: center;
+    padding: 20px;
+    margin-top: -60px;
+    position: relative;
+    text-transform: uppercase;
+}
+section h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    width: 120px;
+    height: 2px;
+    background-color: grey;
+    left: calc(50% - 60px);
+}
+section h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    width: 60px;
+    height: 2px;
+    background-color:red;
+    left: calc(50% - 30px);
+}
+.text-color p{
+    padding-top: 25px;
+    margin-top: 20px;
+    margin-bottom: -40px;
+    color: #000;
+    line-height: 25px;
+    text-align: center;
+}
+#sosmed a{
+    text-decoration:  none;
+    color: rgb(14, 34, 126)
+}
+@media (max-width: 768px){
+    .mobile-menu{
+        display: block;
+    }
+    .navbar ul{
+        display: none;
+    }
+
+}
+
